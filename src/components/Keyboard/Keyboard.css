@@ -1,0 +1,73 @@
+/* Keyboard.css */
+
+/* מכולה ראשית של המקלדת */
+.keyboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* כל שורה במקלדת */
+  .row {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /* התאמה לשורות שונות */
+    gap: 5px;
+  }
+  
+  /* עיצוב כפתורים */
+  .key {
+    background-color: #e0e0e0;
+    color: black;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  /* מעבר עכבר על כפתור */
+  .key:hover {
+    background-color: #d6d6d6;
+  }
+  
+  /* כפתור לחוץ */
+  .key:active {
+    background-color: #ccc;
+    transform: scale(0.95);
+  }
+  
+  /* כפתור הרווח */
+  .space-key {
+    grid-column: span 5; /* תופס מספר עמודות */
+    background-color: #f5f5f5;
+    font-size: 16px;
+  }
+  
+  .space-key:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* כפתור שינוי שפה */
+  .change-lang {
+    grid-column: span 2;
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .change-lang:hover {
+    background-color: #e0a800;
+  }
+  button.space {
+    background-color: #0c0c0b;
+    color: #f4f4f4;
+  }

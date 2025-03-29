@@ -1,0 +1,50 @@
+
+/* עיצוב כללי ללוח */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 עמודות */
+  gap: 10px; /* רווחים בין התאים */
+  width: 400px; /* רוחב הלוח */
+  margin: 20px auto; /* מרכז הלוח */
+  border: 2px solid #eb4c4c; /* מסגרת חיצונית */
+  background-color: #f9f9f9; /* צבע רקע */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* צל */
+  border-radius: 10px; /* פינות מעוגלות */
+}
+
+/* עיצוב לתא בודד */
+.game-cell {
+  display: flex; /* עיצוב גמיש */
+  justify-content: center; /* מרכז אופקי */
+  align-items: center; /* מרכז אנכי */
+  width: 100px; /* גודל התא */
+  height: 100px; /* גובה התא */
+  font-size: 2rem; /* גודל טקסט */
+  font-weight: bold; /* עובי טקסט */
+  color: #333; /* צבע טקסט */
+  border: 1px solid #ccc; /* מסגרת התא */
+  cursor: pointer; /* סמן עכבר */
+  background-color: #fff; /* רקע התא */
+  transition: background-color 0.3s ease; /* אפקט מעבר צבע */
+}
+
+/* אפקט מעבר עם העכבר */
+.game-cell:hover {
+  background-color: #e0e0e0; /* צבע רקע זמני */
+}
+
+/* תא שנבחר (כבר יש בו X או O) */
+.game-cell.filled {
+  cursor: not-allowed; /* סמן שאינו פעיל */
+  background-color: #f0f0f0; /* צבע רקע קבוע */
+  color: #888; /* צבע טקסט מוחלש */
+}
+
+/* עיצוב מיוחד לאותיות X ו-O */
+.game-cell.X {
+  color: #ff5722; /* צבע X */
+}
+
+.game-cell.O {
+  color: #3f51b5; /* צבע O */
+}
